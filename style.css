@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(177, 101, 101, 0.712),
+    rgba(141, 111, 111, 0.7),
+    rgba(21, 96, 131, 0.589)
+  );
+  background-repeat: no-repeat;
+}
+input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*-----banner_section-----*/
+.banner-section h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding: 2rem;
+  color: rgb(250, 239, 239);
+}
+.banner-section p {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  color: rgb(56, 50, 50);
+  font-weight: 600;
+}
+.banner-section button {
+  font-weight: 600;
+}
+.banner-section button:hover {
+  background-color: rgb(10, 98, 170);
+  color: #fff;
+  transition: 0.2s;
+}
+/*-----display_section-----*/
+.display-section {
+  position: relative;
+  margin-top: 2rem;
+}
+.display-section,
+.edit-section {
+  max-width: 70%;
+  margin: auto;
+}
+
+table,
+th,
+td {
+  border-collapse: separate;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+table {
+  border: 1px solid #333;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.display-section th,
+.edit-section th {
+  background-color: rgb(155, 44, 44);
+  color: aliceblue;
+  font-weight: 550;
+}
+
+.display-section tr:nth-child(odd),
+.edit-section tr:nth-child(even) {
+  background-color: rgb(211, 198, 198);
+}
+
+.display-section tr:nth-child(even),
+.edit-section tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+.display-section tr:hover {
+  background-color: rgba(21, 96, 131, 0.589);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.display-section tr:hover td {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.display-section td,
+.edit-section td {
+  color: rgb(34, 31, 31);
+}
+.title td {
+  background: linear-gradient(
+    rgba(27, 26, 26, 0.5),
+    rgba(27, 26, 26, 1),
+    rgba(27, 26, 26, 1)
+  );
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: start;
+}
+
+/*---search---*/
+#search {
+  width: 25%;
+  height: 2rem;
+  position: absolute;
+  right: 1%;
+  top: 0;
+  padding: 5px;
+  transform: translateY(50%);
+  display: none;
+}
+/*------Edit_section-----*/
+.edit-section {
+  display: none;
+  position: relative;
+}
+.edit-section:after {
+  content: "*click on a row to edit it*";
+  position: absolute;
+  color: rgb(36, 19, 19);
+  font-size: 20px;
+  left: 1%;
+  bottom: 0;
+  margin-bottom: 2rem;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+}
+.edit-section .buttons {
+  width: 30%;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: end;
+  padding: 1rem 0px;
+}
+#add {
+  grid-column: 2/3;
+}
+.edit-section .buttons button,
+.banner-section button {
+  padding: 6px 12px;
+  background-color: rgb(38, 89, 131);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.edit-section .buttons button:hover {
+  background-color: rgba(38, 89, 131, 0.7);
+  color: #fff;
+  transition: 0.2s;
+}
+.edit-section table {
+  width: 100%;
+  padding: 0;
+}
+
+.edit-section table,
+.edit-section th,
+.edit-section td {
+  padding: 0;
+  height: 2.5rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+}

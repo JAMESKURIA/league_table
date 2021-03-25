@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenya_League</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="banner-section">
+      <h1>The Kenya Premier League Match Standings</h1>
+      <p>
+        CLick to add or edit the table
+        <span><button id="dispBtn">Edit</button></span>
+      </p>
+    </section>
+    <section class="edit-section">
+      <form id="form" action="">
+        <table>
+          <tr>
+            <th>Team</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>GF</th>
+            <th>GA</th>
+          </tr>
+          <tr>
+            <td><input id="team" type="text" /></td>
+            <td><input id="P" type="number" /></td>
+            <td><input id="W" type="number" /></td>
+            <td><input id="D" type="number" /></td>
+            <td><input id="GF" type="number" /></td>
+            <td><input id="GA" type="number" /></td>
+          </tr>
+        </table>
+      </form>
+      <div class="buttons">
+        <button id="edit">Edit</button>
+        <button id="add">Add</button>
+        <button id="clear">Clear</button>
+        <button id="remove">Delete</button>
+      </div>
+    </section>
+
+    <!-- Display-section -->
+    <section class="display-section">
+      <table class="table">
+        <thead>
+          <tr class="title">
+            <td colspan="10">LOG</td>
+          </tr>
+
+          <tr>
+            <th></th>
+            <th>Team</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+      </table>
+      <input type="search" id="search" placeholder="search teams" />
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
